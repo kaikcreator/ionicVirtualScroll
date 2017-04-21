@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Agenda, Contact } from "../../providers/agenda";
 
@@ -6,11 +6,14 @@ import { Agenda, Contact } from "../../providers/agenda";
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
   public items:Array<Contact> = new Array<Contact>();
 
   constructor(public navCtrl: NavController, public agenda: Agenda) {
+  }
+
+  ngOnInit(){
     this.items = this.agenda.getContacts();
   }
 

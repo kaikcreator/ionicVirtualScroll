@@ -15,7 +15,7 @@ export class Agenda {
 
   getContacts():Contact[]{
     let contacts = [];
-    for(let i=0; i< 10; i++){
+    for(let i=0; i< 500; i++){
       let contact:Contact ={
         name:faker.name.findName(),
         phone:faker.phone.phoneNumber(),

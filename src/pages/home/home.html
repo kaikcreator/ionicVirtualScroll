@@ -1,22 +1,26 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Contacts
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-  <ion-list [virtualScroll]="items" [headerFn]="checkInitialChange" approxItemHeight="100px" approxItemWidth="100%">
+  <ion-list [virtualScroll]="items" [headerFn]="checkInitialChange" 
+  approxItemHeight="100px" approxHeaderHeight="80px">
 
     <ion-item-divider *virtualHeader="let header">
       {{header}}
     </ion-item-divider>
 
     <ion-item *virtualItem="let item">
-        <ion-img width="100px" height="100px" [src]="item.imgUrl"></ion-img>
-      {{item.name}}
+        <ion-img style="width:100px; height:100px" [src]="item.imgUrl"></ion-img>
+        <span>
+          <h1>{{item.name}}</h1>
+          <p>{{item.phone}}</p>
+        </span>
     </ion-item>
 
   </ion-list>

@@ -8,7 +8,7 @@ import { Agenda, Contact } from "../../providers/agenda";
 })
 export class HomePage {
 
-  public items:Array<Contact>;
+  public items:Array<Contact> = new Array<Contact>();
 
   constructor(public navCtrl: NavController, public agenda: Agenda) {
     this.items = this.agenda.getContacts();

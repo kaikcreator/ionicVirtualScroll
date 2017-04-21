@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list [virtualScroll]="items" [headerFn]="checkInitialChange" approxItemHeight="100px" approxItemWidth="100%">
+
+    <ion-item-divider *virtualHeader="let header">
+      {{header}}
+    </ion-item-divider>
+
+    <ion-item *virtualItem="let item">
+        <ion-img width="100px" height="100px" [src]="item.imgUrl"></ion-img>
+      {{item.name}}
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

@@ -38,16 +38,9 @@ export class Agenda {
 
 }
 
-export interface Contact extends ContactAbstact{
+export interface Contact{
     name:string,
     phone:number,
     imgUrl:string  
 }
 
-abstract class ContactAbstact{
-  constructor(  
-    name:string,
-    phone:number,
-    imgUrl:string
-  ){}
-}

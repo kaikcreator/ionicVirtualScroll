@@ -16,7 +16,8 @@
     </ion-item-divider>
 
     <ion-item *virtualItem="let item">
-        <ion-img style="width:100px; height:100px" [src]="item.imgUrl"></ion-img>
+        <!--<ion-img style="width:100px; height:100px" [src]="item.imgUrl"></ion-img>-->
+        <img src="{{item.imgUrl}}" style="width:100px; height:100px">
         <span>
           <h1>{{item.name}}</h1>
           <p>{{item.phone}}</p>
